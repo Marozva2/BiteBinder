@@ -1,3 +1,5 @@
+//sign up
+
 import React, { useState } from "react";
 
 const SignUp = ({ onSignUp }) => {
@@ -33,7 +35,7 @@ const SignUp = ({ onSignUp }) => {
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
       />
-      <button onClick={handleSignUp}>Sign Up</button>
+      <button className="ui secondary button" onClick={handleSignUp}>Sign Up</button>
     </div>
   );
 };
