@@ -30,7 +30,7 @@ const Testimonials = () => {
             <p className="mt-4 text-gray-700">
               I can't believe how much I've learned from the recipes on this
               app. The variety is amazing, and the recipes are easy to follow.
-              Thank you, RecipeApp, for this incredible opportunity!
+              Thank you, BiteBinders, for this incredible opportunity!
             </p>
           </blockquote>
 
@@ -56,7 +56,7 @@ const Testimonials = () => {
             <p className="mt-4 text-gray-700">
               I stumbled upon this app while searching for new recipes. The
               variety of dishes and the user-friendly design are exceptional.
-              Thanks to RecipeApp, I've discovered a plethora of new dishes!
+              Thanks to BiteBinders, I've discovered a plethora of new dishes!
             </p>
           </blockquote>
 
@@ -81,7 +81,7 @@ const Testimonials = () => {
 
             <p className="mt-4 text-gray-700">
               As a professional chef, I'm always on the lookout for new recipes
-              and culinary inspirations. RecipeApp has been an invaluable
+              and culinary inspirations. BiteBinders has been an invaluable
               resource. The diversity of recipes and the quality of the content
               are unbeatable. I'm so grateful for this app!
             </p>
