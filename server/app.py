@@ -4,13 +4,13 @@ from models import db
 from flask_migrate import Migrate 
 
 # Import the resource classes
-from user_resource import UserResource, UsersResource
-from profile_resource import ProfileResource, ProfilesResource
-from recipe_resource import RecipeResource, RecipesResource
-from instruction_resource import RecipeInstructionsResource, RecipeInstructionsListResource
-from ingredient_resource import RecipeIngredientResource, RecipeIngredientsResource
-from review_resource import ReviewResource, ReviewsResource
-from favourites_resource import FavoritesResource, FavoritesListResource
+from server.routes.user_resource import UserResource, UsersResource
+from server.routes.profile_resource import ProfileResource, ProfilesResource
+from server.routes.recipe_resource import RecipeResource, RecipesResource
+from server.routes.instruction_resource import RecipeInstructionsResource, RecipeInstructionsListResource
+from server.routes.ingredient_resource import RecipeIngredientResource, RecipeIngredientsResource
+from server.routes.review_resource import ReviewResource, ReviewsResource
+from server.routes.favourites_resource import FavoritesResource, FavoritesListResource
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 
