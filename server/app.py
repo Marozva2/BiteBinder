@@ -3,14 +3,14 @@ from flask_restful import Api
 from models import db
 from flask_migrate import Migrate 
 
-# Import the resource classes
-from server.routes.user_resource import UserResource, UsersResource
-from server.routes.profile_resource import ProfileResource, ProfilesResource
-from server.routes.recipe_resource import RecipeResource, RecipesResource
-from server.routes.instruction_resource import RecipeInstructionsResource, RecipeInstructionsListResource
-from server.routes.ingredient_resource import RecipeIngredientResource, RecipeIngredientsResource
-from server.routes.review_resource import ReviewResource, ReviewsResource
-from server.routes.favourites_resource import FavoritesResource, FavoritesListResource
+from routes.user import UserResource, UsersResource, UserLoginResource
+from routes.profile import ProfileResource, ProfilesResource
+from routes.recipe import RecipeResource, RecipesResource
+from routes.instruction import RecipeInstructionsResource, RecipeInstructionsListResource
+from routes.ingredient import RecipeIngredientResource, RecipeIngredientsResource
+from routes.review import ReviewResource, ReviewsResource
+from routes.favourites import FavoritesResource, FavoritesListResource
+from routes.auth import AuthorizationResource, AuthorizationsResource
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 
@@ -29,6 +29,10 @@ CORS(app)
 
 api.add_resource(UserResource, '/user/<int:user_id>')
 api.add_resource(UsersResource, '/users')
+api.add_resource(UserLoginResource, '/login')
+
+api.add_resource(AuthorizationResource, '/authorization/<int:authorization_id>')
+api.add_resource(AuthorizationsResource, '/authorizations')
 
 api.add_resource(ProfileResource, '/profile/<int:profile_id>')
 api.add_resource(ProfilesResource, '/profiles')

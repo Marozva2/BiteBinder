@@ -88,9 +88,12 @@ class Favorites(db.Model, SerializerMixin):
     created_at = db.Column(db.DateTime, nullable=False)
 
 
-class TokenBlocklist(db.Model):
-    __tablename__ = 'token_blocklist'
+class Authorization(db.Model, SerializerMixin):
+    __tablename__ = 'authorizations'
 
     id = db.Column(db.Integer, primary_key=True)
-    jti = db.Column(db.String(36), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    role = db.Column(db.String, nullable=False)
     created_at = db.Column(db.DateTime, nullable=False)
+
+    user = db.relationship('User', backref=db.backref('authorizations', lazy=True))
