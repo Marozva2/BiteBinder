@@ -1,6 +1,6 @@
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 from marshmallow import fields
-from models import User, Review, Profile, RecipeInstructions, RecipeIngredient, Recipe, Favorites
+from models import User, Review, Profile, RecipeInstructions, RecipeIngredient, Recipe, Favorites, Authorization
 
 class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
@@ -25,6 +25,12 @@ class RecipeIngredientSchema(SQLAlchemyAutoSchema):
 class FavoritesSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Favorites
+
+class AuthorizationSchema(SQLAlchemyAutoSchema):
+    user = fields.Nested(UserSchema)
+
+    class Meta:
+        model = Authorization
 
 class RecipeSchema(SQLAlchemyAutoSchema):
     reviews = fields.Nested(ReviewSchema, many=True)
